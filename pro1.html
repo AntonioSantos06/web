@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GRUPO TRUPER - Catálogo 2025</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #e6e6e6);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6600, #ff3300);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .slogan {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      font-size: 1.2rem;
+      color: white;
+      animation: deslizar 18s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes deslizar {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .carrito {
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 3px solid #ff6600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carrito img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .carrito h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .carrito p {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .carrito button {
+      padding: 0.6rem 1.2rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .carrito button:hover {
+      background-color: #218838;
+    }
+
+    .brands {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .brands button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .brands button:hover {
+      background: #e65c00;
+    }
+
+    h3 {
+      margin-left: 20px;
+      color: #444;
+      font-size: 1.3rem;
+    }
+
+    table {
+      width: 95%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background: #ff6600;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .btn-agregar {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-agregar:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <style>
+  /* Estilo del fondo del modal */
+  .modal-fondo {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Contenedor del modal */
+  .modal-contenido {
+    margin: 10% auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: zoomIn 0.3s ease;
+    text-align: center;
+  }
+
+  .modal-contenido img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Botón para cerrar */
+  .cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3300;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cerrar-modal:hover {
+    color: #000;
+  }
+
+  @keyframes zoomIn {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+    .b {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .b button {
+      background: beige;
+      color: black;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .b button:hover {
+      background: #e65c00;
+    }
+
+</style>
+
+</head>
+<body>
+    <header>
+  <h1>PRODUCTOS TRUPER 2025</h1>
+  <div class="b">
+   <div> <a href="pagina_prin.php"><button>Página principal</button></a></div>
+      
+      
+</div>
+
+  <div class="slogan">¡Calidad, innovación y confianza en cada herramienta! Visítanos y conoce lo nuevo...</div>
+</header>
+<div id="carrito" class="carrito">
+    <img id="cart-icon" src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" title="Carrito de compra" />
+    <h2>Carrito de Compras</h2>
+    <p id="cantidad">Productos en carrito: 0</p>
+    <p id="total">Total a pagar: $0</p>
+    <ul id="listaCarrito"></ul>
+    <a href="formulario.html"><button>Hacer clic para realizar pago</button></a>
+</div>
+
+<div class="header">
+   <center>
+    <h1>GRUPOS COLOSO'S</h1>
+    </center>
+    <div class="search-bar"></div>
+</div>
+
+<div class="nav-bar">
+</div>
+
+<div class="brands">
+   <div> <a href="pro1.html"><button>Truper</button></a></div>
+   <div><a href="pro2.html"><button>Volteck</button></a></div>
+   <div><a href="j.html"><button>Hermex</button></a></div>
+   <div> <a href="fiero.html"><button>Fiero</button></a></div>
+   <div> <a href="klin.html"><button>Klintek</button></a></div>
+</div>
+
+<h3 style="margin-left:10px;">LISTADO DE PRODUCTOS</h3>
+
+<table>
+    <tr>
+        <th>Marca</th>
+        <th>Código</th>
+        <th>Clave</th>
+        <th>Descripción<br>(Hacer clic para observar el producto)</th>
+        <th>Precio</th>
+        <th>Agregar al carrito</th>
+    </tr>
+
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>17625</td>
+       <td>ACES-20</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d1.jpg')">Aceite de 2 tiempos</a></td>
+       <td>$113</td>
+       <td><button onclick="agregarAlCarrito('Aceite de 2 tiempos', 113,'17625')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>17624</td>
+       <td>ACES-5</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d1.jpg')">Aceite sintético de 2 tiempos</a></td>       
+       <td>$42</td>
+       <td><button onclick="agregarAlCarrito('Aceite sintético de 2 tiempos', 42,'17624')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>14991</td>
+       <td>ACES-2</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d1.jpg')">Aceite sintético de 2 tiempos</a></td>
+       <td>$29</td>
+       <td><button onclick="agregarAlCarrito('Aceite sintético de 2 tiempos', 29,'14991')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>14929</td>
+       <td>ACES-4T-34</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d2.jpg')">Aceite semisintético de 4 tiempos</a></td>
+       <td>$149</td>
+       <td><button onclick="agregarAlCarrito('Aceite semisintético de 4 tiempos', 149,'14929')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>14928</td>
+       <td>ACES-4T-14</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d2.jpg')">Aceite semisintético de 4 tiempos</a></td>
+       <td>$77</td>
+       <td><button onclick="agregarAlCarrito('Aceite semisintético de 4 tiempos', 77,'14928')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>16771</td>
+       <td>A-31-30</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d3.jpg')">Aceite multioso</a></td>
+       <td>$18</td>
+       <td><button onclick="agregarAlCarrito('Aceite multioso', 18,'16771')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>17712</td>
+       <td>A-31-90</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d3.jpg')">Aceite multiusos</a></td>
+       <td>$29</td>
+       <td><button onclick="agregarAlCarrito('Aceite multiusos', 29,'17712')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>104011</td>
+       <td>CARBA-100</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d4.jpg')">Cargador automático de baterías</a></td>
+       <td>$2,095</td>
+       <td><button onclick="agregarAlCarrito('Cargador automático de baterías', 2095,'104011')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>12889</td>
+       <td>CARBA-50X</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d4.jpg')">Cargador automático de baterías</a></td>
+       <td>$1,615</td>
+       <td><button onclick="agregarAlCarrito('Cargador automático de baterías', 1615,'12889')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>10232</td>
+       <td>ATX-12</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d5.jpg')">Arco profesional extrapesado</a></td>
+       <td>$329</td>
+       <td><button onclick="agregarAlCarrito('Arco profesional extrapesado', 329,'10232')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>101525</td>
+       <td>ASP-16X</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d6.jpg')">Aspiradora de acero inoxidable</a></td>
+       <td>$4,350</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora de acero inoxidable', 4350,'101525')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>101524</td>
+       <td>ASP-12X</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d6.jpg')">Aspiradora de acero inoxidable</a></td>
+       <td>$3,950</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora de acero inoxidable', 3950,'101524')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>101523</td>
+       <td>ASP-5X</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d6.jpg')">Aspiradora de acero inoxidable</a></td>
+       <td>$2,150</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora de acero inoxidable', 2150,'101523')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>101520</td>
+       <td>ASP-16</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d7.jpg')">Aspiradora plástica</a></td>
+       <td>$3,150</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora plástica', 3150,'101520')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>101509</td>
+       <td>ASP-12</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d7.jpg')">Aspiradora plástica</a></td>
+       <td>$2,695</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora plástica', 2695,'101509')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>102964</td>
+       <td>ASP-06N</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d7.jpg')">Aspiradora plástica con filtro tipo HEPA</a></td>
+       <td>$1,265</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora plástica con filtro tipo HEPA', 1265,'102964')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>102963</td>
+       <td>ASP-04N</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d7.jpg')">Aspiradora plástica con filtro tipo HEPA</a></td>
+       <td>$1,075</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora plástica con filtro tipo HEPA', 1075,'102963')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>102962</td>
+       <td>ASP-03N</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d7.jpg')">Aspiradora plástica con filtro tipo HEPA</a></td>
+       <td>$825</td>
+       <td><button onclick="agregarAlCarrito('Aspiradora plástica con filtro tipo HEPA', 825,'102962')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+       <td>181415</td>
+       <td>SOPLA-960</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('d8.jpg')">Soplador eléctrico 960 W</a></td>
+       <td>$865</td>
+       <td><button onclick="agregarAlCarrito('Soplador eléctrico 960 W', 865,'181415')">Agregar</button></td>
+    </tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+        <td style="color: orange;">TRUPER</td>
+          <td>15733</td>
+            <td>BAS-600PLA</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d9.jpg')">Bascula electronica de plataforma de acero,plegable</a></td>
+            
+            <td>$5,850</td>
+        <td><button onclick="agregarAlCarrito('Bascula electronica de plataforma de acero,plegable', 5850,'15733')">Agregar</button></td>
+    </tr>
+    <tr>
+    <td style="color: orange;">TRUPER</td>
+            <td>103721</td>
+            <td>BAS-501PLA</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d9.jpg')">Bascula electronica de plataforma de acero,plegable</a></td>
+            <td>$3,450</td>  
+          <td><button onclick="agregarAlCarrito('Bascula electronica de plataforma de acero,plegable', 3450,'103721')">Agregar</button></td>
+    </tr>
+    <tr>
+          
+ <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>17116</td>
+            <td>MOTB-2</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d10.jpg')">Motobomba 0 2 "1",motor a gasolina de 4 tiempos</a></td>
+            <td>$3,250</td>
+                <td><button onclick="agregarAlCarrito('Motobomba 0 2 1,motor a gasolina de 4 tiempos', 3250,'17116')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>102432</td>
+            <td>MOTB-14</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d10.jpg')">Motobomba 0 2 "1",motor a gasolina de 4 tiempos</a></td>       
+            <td>$2,450</td>
+         <td><button onclick="agregarAlCarrito('Motobomba 0 2 ,motor a gasolina de 4 tiempos', 2450,'102432')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>11402</td>
+            <td>JBAV-13</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d11.jpg')">Juego de 13 brocas,TRUGOLD,135°</a></td>
+            <td>$399</td>
+        <td><button onclick="agregarAlCarrito('Juego de 13 brocas,TRUGOLD,135°', 399,'11402')">Agregar</button></td>
+    </tr>
+<tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>11541</td>
+            <td>CT-612</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d12.jpg')">Cardas de copa ,alambretrenzado fino,diametro 5</a></td>
+            
+            <td>$255</td>
+        <td><button onclick="agregarAlCarrito('Cardas de copa ,alambretrenzado fino,diametro 5', 255,'11541')">Agregar</button></td>
+    </tr>
+<tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>100853</td>
+            <td>CT-612 MR</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d12.jpg')">Cardas de copa ,alambretrenzado fino,diametro 5</a></td>
+            
+            <td>$255</td>
+        <td><button onclick="agregarAlCarrito('Cardas de copa ,alambretrenzado fino,diametro 5', 255,'100853')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>10233</td>
+            <td>CAT-45FF</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d13.jpg')">Carretilla cocha metalica</a></td>
+            
+            <td>$1,565</td>
+        <td><button onclick="agregarAlCarrito('Carretilla cocha metalica', 1565,'10233')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>11740</td>
+            <td>CAT-45ND</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d13.jpg')">Carretilla cocha metalica</a></td>
+            
+            <td>$1,395</td>
+        <td><button onclick="agregarAlCarrito('Carretilla cocha metalica', 1395,'11740')">Agregar</button></td>
+    </tr>
+    <tr>
+           <td style="color: orange;">TRUPER</td>
+            <td>10253</td>
+            <td>CAT-55FF</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d13.jpg')">Caretillas concha metalica,angostas</a></td>
+            
+            <td>$1,585</td>
+        <td><button onclick="agregarAlCarrito('Caretillas concha metalica,angostas', 1585)">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>11761</td>
+            <td>CAT-55ND</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d13.jpg')">Carretilla concha metalica ,angosta</a></td>
+            
+            <td>$1,425</td>
+        <td><button onclick="agregarAlCarrito('Carretilla concha metalica ,angosta', 1425,'11761')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>19810</td>
+            <td>TP-8</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d14.jpg')">Carretilla 8ft,concha plastica,bastidores de madera</a></td>
+            
+            <td>$1,815</td>
+        <td><button onclick="agregarAlCarrito('Carretilla 8ft,concha plastica,bastidores de madera', 1815,'19810')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>11850</td>
+            <td>N</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d15.jpg')">Llanta sin camara </a></td>
+            
+            <td>$149</td>
+        <td><button onclick="agregarAlCarrito('Llanta sin camara ', 149,'11850')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>11856</td>
+            <td>SS</td>
+          <td><a href="javascript:void(0);" onclick="mostrarImagen('d15.jpg')">Llanta sin camara </a></td>
+            
+            <td>$115</td>
+        <td><button onclick="agregarAlCarrito('Llanta sin camara ',115,'11856')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>12665</td>
+            <td>CEA-82</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d16.jpg')">Cepillo rectangular de alambre</a></td>
+            
+            <td>$97</td>
+        <td><button onclick="agregarAlCarrito('Cepillo rectangular de alambre', 97,'12665')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+           <td>11562</td>
+            <td>CEA-72</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d16.jpg')">Cepillo rectangular de alambre</a></td>
+            
+            <td>$77</td>
+        <td><button onclick="agregarAlCarrito('Cepillo rectangular de alambre', 77,'11562')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>12665</td>
+            <td>CEA-36</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d16.jpg')">Cepillo rectangular de alambre</a></td>
+            
+            <td>$55</td>
+        <td><button onclick="agregarAlCarrito('Cepillo rectangular de alambre', 55,'12665')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>11773</td>
+            <td>CAZ-90X</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d17.jpg')">Cortador de azulejos profesionales para gran formato,con monogui y base de aluminio</a></td>
+            
+            <td>$5,250</td>
+        <td><button onclick="agregarAlCarrito('Cortador de azulejos profesionales para gran formato,con monogui y base de aluminio', 5250,'11773')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+           <td>11775</td>
+            <td>CAZ-120X</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d17.jpg')">Cortador de azulejos profesionales para gran formato,con monogui y base de aluminio</a></td>
+            
+            <td>$5,950</td>
+        <td><button onclick="agregarAlCarrito('Cortador de azulejos profesionales para gran formato,con monogui y base de aluminio',5950,'11775')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+             <td>11231</td>
+            <td>CT-9B</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d18.jpg')">Cuchara forjada Filaderia,mango Comfort Grip</a></td>
+            <td>$185</td>
+        <td><button onclick="agregarAlCarrito('Cuchara forjada Filaderia,mango Comfort Grip', 185,'11231')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+              <td>11231</td>
+            <td>CT-10B</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d18.jpg')">Cuchara forjada Filaderia,mango Comfort Grip</a></td>
+            <td>$199</td>
+        <td><button onclick="agregarAlCarrito('Cuchara forjada Filaderia,mango Comfort Grip', 199,'11231')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>11231</td>
+            <td>CT-11B</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d18.jpg')">Cuchara forjada Filaderia,mango Comfort Grip</a></td>
+            <td>$209</td>
+        <td><button onclick="agregarAlCarrito('Cuchara forjada Filaderia,mango Comfort Grip', 209,'11231')">Agregar</button></td>
+    </tr>
+    <tr>
+    <td style="color: orange;">TRUPER</td>
+             <td>11231</td>
+            <td>CT-12B</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d18.jpg')">Cuchara forjada Filaderia,mango Comfort Grip</a></td>
+            <td>$225</td>
+        <td><button onclick="agregarAlCarrito('Cuchara forjada Filaderia,mango Comfort Grip', 225,'11231')">Agregar</button></td>
+    </tr>
+    <tr>
+      
+ <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>103108</td>
+            <td>JD-1/4X21MP<o/td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d19.jpg')">Juego de dados mixtos con matraca ,21 piezas</a></td>
+            <td>$525</td>
+                <td><button onclick="agregarAlCarrito('Juego de dados mixtos con matraca ,21 piezas', 525,'103108')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>12976</td>
+            <td>DID-390</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d20.jpg')">Disco de diamante rin segmentado ,corte rapido</a></td>            <td>$455</td>
+         <td><button onclick="agregarAlCarrito('Disco de diamante rin segmentado ,corte rapido', 455,'12976')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>11580</td>
+            <td>DID-370</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d20.jpg')">Disco de diamante rin segmentado ,corte rapido</a></td>            <td>$355</td>
+         <td><button onclick="agregarAlCarrito('Disco de diamante rin segmentado ,corte rapido', 355,'11580')">Agregar</button></td>
+    </tr>
+<tr>
+        <td style="color: orange;">TRUPER</td>
+             <td>103789</td>
+            <td>DID-350</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d20.jpg')">Disco de diamante rin segmentado ,corte rapido</a></td>            <td>$255</td>
+         <td><button onclick="agregarAlCarrito('Disco de diamante rin segmentado ,corte rapido', 255,'103789')">Agregar</button></td>
+    </tr>
+<tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>18317</td>
+            <td>ST-748</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d20.jpg')">Disco sierra multimaterial</a></td>
+            
+            <td>$255</td>
+        <td><button onclick="agregarAlCarrito('Disco sierra multimaterial', 255,'18317')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>103035</td>
+            <td>ST-76 OMM</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d21.jpg')">Disco sierra multimaterial</a></td>
+            
+            <td>$255</td>
+        <td><button onclick="agregarAlCarrito('Disco sierra multimaterial', 255,'103035')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>19788</td>
+            <td>EP-26R</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d22.jpg')">Escoba plastica ,diseño recto</a></td>
+            <td>$145</td>
+        <td><button onclick="agregarAlCarrito('Escoba plastica', 145,'19788')">Agregar</button></td>
+    </tr>
+    <tr>
+      <td style="color: orange;">TRUPER</td>
+     <td>19786</td>
+            <td>EP-22R</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d22.jpg')">Escoba plastica ,diseño recto</a></td>
+            <td>$115</td>
+        <td><button onclick="agregarAlCarrito('Escoba plastica', 115,'19786')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+           <td>19785</td>
+            <td>EP-22F</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d22.jpg')">Escoba plastica ,diseño recto</a></td>
+            <td>$110</td>
+        <td><button onclick="agregarAlCarrito('Escoba plastica', 110,'19785')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>12645</td>
+            <td>TFC-10 OME</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d23.jpg')">Cinta largas de vidrio ,tipo crueta </a></td>
+            <td>$705</td>
+        <td><button onclick="agregarAlCarrito('Cinta largas de vidrio ,tipo crueta', 705,'12645')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+              <td>12647</td>
+            <td>TFC-50 ME</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d23.jpg')">Cinta largas de vidrio ,tipo crueta </a></td>
+            <td>$329</td>
+        <td><button onclick="agregarAlCarrito('Cinta largas de vidrio ,tipo crueta', 329,'12647')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+              <td>12646</td>
+            <td>TFC-30 ME</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d23.jpg')">Cinta largas de vidrio ,tipo crueta </a></td>
+            <td>$279</td>
+        <td><button onclick="agregarAlCarrito('Cinta largas de vidrio ,tipo crueta', 279,'12646')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>15831</td>
+            <td>ODM-12</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d24.jpg')">Odometro con freno ,rueda de 13</a></td>
+            
+            <td>$1,725</td>
+        <td><button onclick="agregarAlCarrito('Odometro con freno ,rueda de 13', 1725,'15831')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>14954</td>
+            <td>HE-600</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d25.jpg')">Hacha europeas,mango de hickory</a></td>
+            <td>$225</td>
+        <td><button onclick="agregarAlCarrito('Hacha europeas,mango de hickory', 225,'14954')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>100494</td>
+            <td>HE-800</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d25.jpg')">Hacha europeas,mango de hickory</a></td>
+            <td>$235</td>
+        <td><button onclick="agregarAlCarrito('Hacha europeas,mango de hickory', 235,'100494')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+             <td>101768</td>
+            <td>HE-1000</td>
+            <<td><a href="javascript:void(0);" onclick="mostrarImagen('d25.jpg')">Hacha europeas,mango de hickory</a></td>
+            <td>$295</td>
+        <td><button onclick="agregarAlCarrito('Hacha europeas,mango de hickory', 295,'101768')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+           <td>102111</td>
+            <td>HILA-2000X</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d26.jpg')">Hidrolavadora electrica 2,000 psi</a></td>
+            
+            <td>$5,250</td>
+        <td><button onclick="agregarAlCarrito('Hidrolavadora electrica 2,000 psi', 5250,'102111')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+             <td>101594</td>
+            <td>HILA-1800</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d27.jpg')">Hirolaadora electrica 1,800 psi</a></td>
+            
+            <td>$1,815</td>
+        <td><button onclick="agregarAlCarrito('Hirolaadora electrica 1,800 psi', 1815,'01594')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>11971</td>
+            <td>REV-8</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d28.jpg')">Revolvedor para pintura ,materiales liquidos y adhesivo ceramico</a></td>
+            <td>$77</td>
+        <td><button onclick="agregarAlCarrito('Revolvedor para pintura ,materiales liquidos y adhesivo ceramico', 77,'11971')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+          <td>15824</td>
+            <td>REV-10</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d28.jpg')">Revolvedor para pintura ,materiales liquidos y adhesivo ceramico</a></td>
+            <td>$115</td>
+        <td><button onclick="agregarAlCarrito('Revolvedor para pintura ,materiales liquidos y adhesivo ceramico', 115,'15824')">Agregar</button></td>
+    </tr>
+    <tr>
+    <td style="color: orange;">TRUPER</td>
+             <td>102461</td>
+            <td>REV-12</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d28.jpg')">Revolvedor para pintura ,materiales liquidos y adhesivo ceramico</a></td>
+            <td>$199</td>
+        <td><button onclick="agregarAlCarrito('Revolvedor para pintura ,materiales liquidos y adhesivo ceramico', 199,'102461')">Agregar</button></td>
+    </tr>
+    <tr>
+            
+ <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>100654</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d29.jpg')">Machete Rambo</a></td>
+            <td>$89</td>
+                <td><button onclick="agregarAlCarrito('Machete Rambo', 89,'100654')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>100655</td>
+            <td>T-460-12B</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d29.jpg')">Machete Rambo</a></td>       
+            <td>$89</td>
+         <td><button onclick="agregarAlCarrito('Machete Rambo', 89,'100655')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>1103235</td>
+            <td>SINCO-12</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d30.jpg')">Sierra de inglete compuesta,para corte de madera y aluminio</a></td>
+            <td>$7,050</td>
+        <td><button onclick="agregarAlCarrito('Sierra de inglete compuesta,para corte de madera y aluminio', 7050,'1103235')">Agregar</button></td>
+    </tr>
+<tr>
+        <td style="color: orange;">TRUPER</td>
+          <td>16869</td>
+            <td>SINCO-10x2</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d30.jpg')">Sierra de inglete compuesta,para corte de madera y aluminio</a></td>
+            <td>$5,750</td>
+        <td><button onclick="agregarAlCarrito('Sierra de inglete compuesta,para corte de madera y aluminio', 5750,'16869')">Agregar</button></td>
+    </tr>
+<tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>1103236</td>
+            <td>SINCO-10-3</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d30.jpg')">Sierra de inglete compuesta,para corte de madera y aluminio</a></td>
+            <td>$3,950</td>
+        <td><button onclick="agregarAlCarrito('Sierra de inglete compuesta,para corte de madera y aluminio', 3950,'1103236')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>12483</td>
+            <td>ESMA-9N4</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d31.jpg')">Esmerilidora de 9 2450 W</a></td>
+            
+            <td>$4,150</td>
+        <td><button onclick="agregarAlCarrito('Esmerilidora de 9 2450 W', 4150,'12483')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>13870</td>
+            <td>ESMA-4580N</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d32.jpg')">Esmeriladora 4 1/2 950W</a></td>
+            
+            <td>$1,050</td>
+        <td><button onclick="agregarAlCarrito('Esmeriladora 4 1/2 950W', 1050,'13870')">Agregar</button></td>
+    </tr>
+    <tr>
+           <td style="color: orange;">TRUPER</td>
+            <td>102496</td>
+            <td>ESMA-4580PN</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d32.jpg')">Esmeriladora 4 1/2 950W</a></td>
+            
+            <td>$935</td>
+        <td><button onclick="agregarAlCarrito('Esmeriladora 4 1/2 950W', 935,'102496')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>14659</td>
+            <td>ROTO-1/2A9</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d33.jpg')">Rotomartillo 850 W 1/2</a></td>
+            
+            <td>$1,050</td>
+        <td><button onclick="agregarAlCarrito('Rotomartillo 850 W 1/2', 1050,'14659')">Agregar</button></td>
+    </tr>
+    <tr>
+          <td style="color: orange;">TRUPER</td>
+            <td>14658</td>
+            <td>ROTO-1/2A8</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d34.jpg')">Rotomartillo 750W 1/2</a></td>
+            
+            <td>$745</td>
+        <td><button onclick="agregarAlCarrito('Rotomartillo 750W 1/2', 745,'14658')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>101456</td>
+            <td>COMBOE-4590N</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d35.jpg')">Combo esmeriladora 4 1/2 950W 11discos</a></td>
+            
+            <td>$1,435</td>
+        <td><button onclick="agregarAlCarrito('Combo esmeriladora 4 1/2 950W 11discos', 1435,'101456' )">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>13448</td>
+            <td>LIBA-3X2IA2</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d36.jpg')">Lijadora de banda 3 x 21</a></td>
+            
+            <td>$1,595</td>
+        <td><button onclick="agregarAlCarrito('Lijadora de banda 3 x 21', 1595,'13448')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>16626</td>
+            <td>PULA-7A3</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d37.jpg')">Pulidora rotativa 7 , 1,200W</a></td>
+            
+            <td>$1,595</td>
+        <td><button onclick="agregarAlCarrito('Pulidora rotativa 7 , 1,200W', 1595,'16626')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>101453</td>
+            <td>MAX-20R</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d38.jpg')">Rotomartilloinalambrico 1/2 20V</a></td>
+            
+            <td>$3,250</td>
+        <td><button onclick="agregarAlCarrito('Rotomartilloinalambrico 1/2 20V', 3250,'101453')">Agregar</button></td>
+    </tr>
+    <tr>
+       <td style="color: orange;">TRUPER</td>
+            <td>101405</td>
+            <td>MAX-20 RS</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d38.jpg')">Rotomartillo inalambrico</a></td>
+            
+            <td>$1,485</td>
+        <td><button onclick="agregarAlCarrito('Rotomartillo inalambrico', 1485,'101405')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+            <td>103253</td>
+            <td>DIMI-20 A2</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d39.jpg')">Destornillador de impacto inalambrico</a></td>
+            
+            <td>$2,050</td>
+        <td><button onclick="agregarAlCarrito('Destornillador de impacto inalambrico', 2050,'103253')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+           <td>103254</td>
+            <td>DIMI-20 AS</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d39.jpg')">Destornillador de impacto inalambrico</a></td>
+            
+            <td>$1,150</td>
+        <td><button onclick="agregarAlCarrito('Destornillador de impacto inalambrico', 1150,'103254')">Agregar</button></td>
+    </tr>
+    <tr>
+             <td style="color: orange;">TRUPER</td>
+             <td>103256</td>
+            <td>SICI-20A</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d40.jpg')">Sierra sircular inalambrica</a></td>
+            
+            <td>$2,585</td>
+        <td><button onclick="agregarAlCarrito('Sierra sircular inalambrica', 2585,'103256')">Agregar</button></td>
+    </tr>
+    <tr>
+         <td style="color: orange;">TRUPER</td>
+            <td>103257</td>
+            <td>SICI-20AS</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d40.jpg')">Sierra sircular inalambrica</a></td>
+            
+            <td>$1,265</td>
+        <td><button onclick="agregarAlCarrito('Sierra sircular inalambrica',1265,'103257')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: orange;">TRUPER</td>
+          <td>103205</td>
+            <td>DES-45M</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('d41.jpg')">Desbrozadora multifuncional 4 en 1 con motor a gasolina </a></td>
+            
+            <td>$5,750</td>
+        <td><button onclick="agregarAlCarrito('Desbrozadora multifuncional 4 en 1 con motor a gasolina', 5750,'103205')">Agregar</button></td>
+    </tr>
+    <tr>
+    <td style="color: orange;">TRUPER</td>
+            <td>12251</td>
+            <td>C0S-26X</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('d42.jpg')">Cortasetos con motor a gasolina 26 cc uso profesional espada 65 cm</a></td>
+            <td>$4,150</td>  
+          <td><button onclick="agregarAlCarrito('Cortasetos con motor a gasolina 26 cc uso profesional espada 65 cm', 4150,'12251')">Agregar</button></td>
+    </tr>
+    <tr>
+           
+
+</table>
+
+
+<script>
+let total = 0;
+let cantidad = 0;
+
+function agregarAlCarrito(nombre, precio, clave = "", boton = null) {
+  fetch('r.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'clave=' + encodeURIComponent(clave)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'agotado') {
+      alert("Este producto ya está agotado.");
+      if (boton) {
+        boton.disabled = true;
+        boton.textContent = "Agotado";
+      }
+    } else if (data.status === 'ok') {
+      cantidad++;
+      total += precio;
+      actualizarResumen();
+
+      const lista = document.getElementById('listaCarrito');
+      const item = document.createElement('li');
+      item.textContent = nombre + " - $" + precio;
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = "Eliminar";
+      botonEliminar.style.marginLeft = "10px";
+      botonEliminar.style.backgroundColor = "#d32f2f";
+      botonEliminar.style.color = "white";
+      botonEliminar.style.border = "none";
+      botonEliminar.style.borderRadius = "4px";
+      botonEliminar.style.cursor = "pointer";
+
+      botonEliminar.onclick = function () {
+        lista.removeChild(item);
+        cantidad--;
+        total -= precio;
+        actualizarResumen();
+      };
+
+      item.appendChild(botonEliminar);
+      lista.appendChild(item);
+    } else {
+      alert("Error al actualizar inventario: " + data.msg);
+    }
+  });
+}
+
+function actualizarResumen() {
+  document.getElementById('cantidad').innerText = "Productos en carrito: " + cantidad;
+  document.getElementById('total').innerText = "Total a pagar: $" + total;
+}
+</script>
+<div id="miModal" class="modal-fondo">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+    <img id="imgModal" src="" alt="Vista de producto">
+  </div>
+</div>
+
+<script>
+  function mostrarImagen(rutaImagen) {
+    const modal = document.getElementById("miModal");
+    const img = document.getElementById("imgModal");
+    img.src = rutaImagen;
+    modal.style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+  }
+
+  // Cierra al hacer clic fuera del modal
+  window.onclick = function(event) {
+    const modal = document.getElementById("miModal");
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  }
+</script>
+
+
+
+
+</body>
+</html>

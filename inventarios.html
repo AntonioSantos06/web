@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcas Premium</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f5fafd);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #1c1c1c;
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    .boton {
+      background: linear-gradient(135deg, #ffffff, #e0ecff);
+      border: none;
+      padding: 15px 40px;
+      margin: 15px;
+      font-size: 1.1em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 8px 16px rgba(0, 98, 255, 0.15);
+      font-weight: 600;
+      color: #1a1a1a;
+      backdrop-filter: blur(5px);
+    }
+
+    .boton:hover {
+      background: linear-gradient(135deg, #cce0ff, #d0f0ff);
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 98, 255, 0.25);
+    }
+
+    .boton:active {
+      transform: scale(0.98);
+      box-shadow: 0 4px 10px rgba(0, 98, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selecciona una Marca</h1>
+   <a href="inventario.php"> <button class="boton">Truper</button></a>
+  <a href="v.php">  <button class="boton">Volteck</button></a>
+   <a href="h_inventario.php"> <button class="boton">Hermex</button></a>
+   <a href="i_fiero.php"> <button class="boton">Fiero</button></a>
+   <a href="k.php"> <button class="boton">Klintek</button></a><br><br>
+   <a href="profile.php"> <button class="boton">Regresar a mi perfil</button></a>
+  </div>
+   
+   
+  
+</body>
+</html>

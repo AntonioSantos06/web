@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GRUPO TRUPER - Catálogo 2025</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #e6e6e6);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6600, #ff3300);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .slogan {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      font-size: 1.2rem;
+      color: white;
+      animation: deslizar 18s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes deslizar {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .carrito {
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 3px solid #ff6600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carrito img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .carrito h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .carrito p {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .carrito button {
+      padding: 0.6rem 1.2rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .carrito button:hover {
+      background-color: #218838;
+    }
+
+    .brands {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .brands button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .brands button:hover {
+      background: #e65c00;
+    }
+
+    h3 {
+      margin-left: 20px;
+      color: #444;
+      font-size: 1.3rem;
+    }
+
+    table {
+      width: 95%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background: #ff6600;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .btn-agregar {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-agregar:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <style>
+  /* Estilo del fondo del modal */
+  .modal-fondo {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Contenedor del modal */
+  .modal-contenido {
+    margin: 10% auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: zoomIn 0.3s ease;
+    text-align: center;
+  }
+
+  .modal-contenido img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Botón para cerrar */
+  .cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3300;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cerrar-modal:hover {
+    color: #000;
+  }
+
+  @keyframes zoomIn {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+    .b {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .b button {
+      background: beige;
+      color: black;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .b button:hover {
+      background: #e65c00;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>PRODUCTOS HERMEX 2025</h1>
+   <div class="b">
+   <div> <a href="pagina_prin.php"><button>Página principal</button></a></div>
+      
+      
+</div>
+  <div class="slogan">¡Calidad, innovación y confianza en cada herramienta! Visítanos y conoce lo nuevo...</div>
+</header>
+
+<div class="carrito" id="carrito">
+  <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito de compra">
+  <h2>Carrito de Compras</h2>
+  <p id="cantidad">Productos en carrito: 0</p>
+  <p id="total">Total a pagar: $0</p>
+  <ul id="listaCarrito"></ul>
+  <a href="formulario.html"><button>Hacer clic para realizar pago</button></a>
+</div>
+<div class="header">
+   <center>
+    <h1>GRUPOS COLOSO'S</h1>
+    </center>
+    <div class="search-bar"></div>
+</div>
+<div class="brands">
+   <div> <a href="pro1.html"><button>Truper</button></a></div>
+   <div><a href="pro2.html"><button>Volteck</button></a></div>
+   <div><a href="j.html"><button>Hermex</button></a></div>
+   <div> <a href="fiero.html"><button>Fiero</button></a></div>
+   <div> <a href="klin.html"><button>Klintek</button></a></div>
+</div>
+
+<h3 style="margin-left:10px;">LISTADO DE PRODUCTOS</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Código</th>
+            <th>Clave</th>
+            <th>Descripción <br>(Hacer clic para observar el producto)</th>
+            <th>Precio</th>
+            <th>Agregar al carrito</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>HERMEX</td>
+            <td>23516</td>
+            <td>CLG-30</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e1 (2).jpeg')">Candado de latón 30 mm gancho largo</a></td>
+            <td>$77.00</td>
+            <td><button onclick="agregarAlCarrito('Candado de latón 30 mm', 77,'23516')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23517</td>
+            <td>CLG-40</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e4.jpeg')">Candado de latón 40 mm gancho largo</a></td>
+            <td>$114.00</td>
+            <td><button onclick="agregarAlCarrito('Candado de latón 40 mm', 114,'23517')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23510</td>
+            <td>CLT-40</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e3.jpeg')">Candado de latón 40 mm llave tetra</a></td>
+            <td>$163.06</td>
+            <td><button onclick="agregarAlCarrito('Candado de latón llave tetra', 163.06,'23510')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>22515</td>
+            <td>CAH-50</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e5.jpeg')">Candado antipalanca 50 mm cuerpo de hierro</a></td>
+            <td>$90.29</td>
+            <td><button onclick="agregarAlCarrito('Candado antipalanca 50 mm hierro', 90.29,'22515')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>22518</td>
+            <td>CAL-60</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e6.jpeg')">Candado antipalanca 60 mm cuerpo de latón</a></td>
+            <td>$235.48</td>
+            <td><button onclick="agregarAlCarrito('Candado antipalanca 60 mm latón', 235.48,'22518')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23512</td>
+            <td>CAL-75</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e7.jpeg')">Candado antipalanca 75 mm cuerpo de latón</a></td>
+            <td>$338.73</td>
+            <td><button onclick="agregarAlCarrito('Candado antipalanca 75 mm latón', 338.73,'23512')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23524</td>
+            <td>CAM-75</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e8.jpeg')">Candado antipalanca 75 mm cuerpo metálico</a></td>
+            <td>$214.60</td>
+            <td><button onclick="agregarAlCarrito('Candado antipalanca 75 mm metálico', 214.60,'23524')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>27088</td>
+            <td>CAM-85</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e9.jpeg')">Candado antipalanca 85 mm cuerpo metálico</a></td>
+            <td>$214.60</td>
+            <td><button onclick="agregarAlCarrito('Candado antipalanca 85 mm metálico', 214.60,'27088')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43714</td>
+            <td>PC-03</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e10.jpeg')">Pasador de cromo 3 pulgadas</a></td>
+            <td>$44.00</td>
+            <td><button onclick="agregarAlCarrito('Pasador de cromo 3 pulgadas', 44,'43714')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43709</td>
+            <td>PC-CA</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e11.jpeg')">Pasador con cadena de acero</a></td>
+            <td>$184.00</td>
+            <td><button onclick="agregarAlCarrito('Pasador con cadena de acero', 184,'43709')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43702</td>
+            <td>PAA-LA</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e12.jpeg')">Pasador abatible de latón antiguo</a></td>
+            <td>$175.00</td>
+            <td><button onclick="agregarAlCarrito('Pasador latón antiguo', 175,'43702')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43159</td>
+            <td>BBI-110</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e13.jpeg')">Bisagra bidimensional 110° interna</a></td>
+            <td>$18.84</td>
+            <td><button onclick="agregarAlCarrito('Bisagra 110° interna', 18.84,'43159')">Agregar</button></td>
+        </tr>
+    
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td>HERMEX</td>
+            <td>43160</td>
+            <td>BBI-95</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e14.jpeg')">Bisagra bidimensional 95° media</a></td>
+            <td>$15.66</td>
+            
+            <td><button onclick="agregarAlCarrito('Bisagra 95° media', 15.66,'43160')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43232</td>
+            <td>BQ-3</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e15.jpeg')">Bisagra cuadrada 3 pulgadas</a></td>
+            <td>$25.03</td>
+       
+            <td><button onclick="agregarAlCarrito ('Bisagra cuadrada 3', 25.03,'43232')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>043203</td>
+            <td>BR-3SS</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e16.jpeg')">Bisagra rectangular 3 pulgadas acero inoxidable</a></td>
+            <td>$34.00</td>
+            
+            <td><button onclick="agregarAlCarrito('Bisagra rectangular 3&quot; inox', 34,'043203')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>43568</td>
+            <td>CM-26L</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e17.jpeg')">Cerradura para mueble modelo 26 latón</a></td>
+            <td>$119.33</td>
+          
+            <td><button onclick="agregarAlCarrito('Cerradura mueble 26 latón', 119.33,'43568')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23656</td>
+            <td>CP-LE</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e19.jpeg')">Cerradura de pomo trubal tubular latón antiguo entrada</a></td>
+            <td>$121.00</td>
+           
+            <td><button onclick="agregarAlCarrito('Cerradura pomo latón entrada', 121,'23656')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23663</td>
+            <td>CP-CMB</td>
+           <td><a href="javascript:void(0);" onclick="mostrarImagen('e18.jpeg')">Cerradura de pomo trubal tubular cromo mate para baño</a></td>
+            <td>$108.90</td>
+            
+            <td><button onclick="agregarAlCarrito('Cerradura pomo cromo baño', 108.90,'23663')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23675</td>
+            <td>CR-MAR</td>
+             <td><a href="javascript:void(0);" onclick="mostrarImagen('e21.jpeg')">Cerrojo llave - mariposa</a></td>
+            <td>$565.00</td>
+            
+            <td><button onclick="agregarAlCarrito('Cerrojo llave mariposa', 565,'23675')">Agregar</button></td>
+        </tr>
+        <tr>
+            <td>HERMEX</td>
+            <td>23611</td>
+            <td>CR-TRA</td>
+            <td><a href="javascript:void(0);" onclick="mostrarImagen('e22.jpeg')">Cerrojo llave - llave tradicional</a></td>
+            <td>$162.00</td>
+            
+            <td><button onclick="agregarAlCarrito('Cerrojo llave tradicional', 162,'23611')">Agregar</button></td>
+        
+        </tr>
+   
+</table>
+<script>
+let total = 0;
+let cantidad = 0;
+
+function agregarAlCarrito(nombre, precio, clave = "", boton = null) {
+  fetch('r2.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'clave=' + encodeURIComponent(clave)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'agotado') {
+      alert("Este producto ya está agotado.");
+      if (boton) {
+        boton.disabled = true;
+        boton.textContent = "Agotado";
+      }
+    } else if (data.status === 'ok') {
+      cantidad++;
+      total += precio;
+      actualizarResumen();
+
+      const lista = document.getElementById('listaCarrito');
+      const item = document.createElement('li');
+      item.textContent = nombre + " - $" + precio;
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = "Eliminar";
+      botonEliminar.style.marginLeft = "10px";
+      botonEliminar.style.backgroundColor = "#d32f2f";
+      botonEliminar.style.color = "white";
+      botonEliminar.style.border = "none";
+      botonEliminar.style.borderRadius = "4px";
+      botonEliminar.style.cursor = "pointer";
+
+      botonEliminar.onclick = function () {
+        lista.removeChild(item);
+        cantidad--;
+        total -= precio;
+        actualizarResumen();
+      };
+
+      item.appendChild(botonEliminar);
+      lista.appendChild(item);
+    } else {
+      alert("Error al actualizar inventario: " + data.msg);
+    }
+  });
+}
+
+function actualizarResumen() {
+  document.getElementById('cantidad').innerText = "Productos en carrito: " + cantidad;
+  document.getElementById('total').innerText = "Total a pagar: $" + total;
+}
+</script>
+<div id="miModal" class="modal-fondo">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+    <img id="imgModal" src="" alt="Vista de producto">
+  </div>
+</div>
+
+<script>
+  function mostrarImagen(rutaImagen) {
+    const modal = document.getElementById("miModal");
+    const img = document.getElementById("imgModal");
+    img.src = rutaImagen;
+    modal.style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+  }
+
+  // Cierra al hacer clic fuera del modal
+  window.onclick = function(event) {
+    const modal = document.getElementById("miModal");
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  }
+</script>
+</body>
+</html>

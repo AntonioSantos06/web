@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de Transferencia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #fce4ec, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 450px;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #ad1457;
+    }
+
+    .card p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ad1457;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .success {
+      color: green;
+      font-size: 20px;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Procesando Transferencia...</h2>
+    <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+    <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
+    <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+    <p><strong>Referencia:</strong> <span id="referencia"></span></p>
+    <p><strong>Monto:</strong> $<span id="monto"></span></p>
+
+    <div class="loader"></div>
+    <div class="success" id="successMsg">✅ Transferencia completada con éxito</div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nombre").textContent = params.get("nombre");
+    document.getElementById("telefono").textContent = params.get("telefono");
+    document.getElementById("direccion").textContent = params.get("direccion");
+    document.getElementById("referencia").textContent = params.get("referencia");
+    document.getElementById("monto").textContent = params.get("monto");
+
+    setTimeout(() => {
+      document.querySelector('.loader').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+
+      // Redirección a la página de envío
+      setTimeout(() => {
+        window.location.href = "envio.html";
+      }, 3000);
+    }, 3000);
+  </script>
+
+</body>
+</html>

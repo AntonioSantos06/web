@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Opinión del Usuario</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8f9fa, #dbe9ff);
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #0056b3;
+    }
+
+    label {
+      display: block;
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #007bff;
+      background-color: #f0f8ff;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .rating {
+      margin-top: 10px;
+    }
+
+    .rating label {
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    .rating input[type="radio"] {
+      transform: scale(1.3);
+      margin-right: 5px;
+    }
+
+    .submit-btn {
+      margin-top: 40px;
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(45deg, #0056b3, #003a80);
+    }
+
+
+    .b button {
+      margin-top: 40px;
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .b button:hover {
+      background: linear-gradient(45deg, #0056b3, #003a80);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>¡Queremos conocer tu opinión!</h2>
+    <form action="guardar_opinion.php" method="POST">
+      <label for="nombre">Ingresa tu nombre:</label>
+      <input type="text" name="nombre" required>
+
+      <label for="p1">¿Qué fue lo que más te gustó de nuestro sitio web?</label>
+      <textarea name="p1" rows="3" required></textarea>
+
+      <label for="p2">Describe lo que no te gustó del sistema o qué crees que se podría mejorar:</label>
+      <textarea name="p2" rows="3" required></textarea>
+
+      <label for="p3">Describe tu experiencia sobre el sitio:</label>
+      <textarea name="p3" rows="3" required></textarea>
+
+      <label for="p4">Si fueras el creador del sitio web, ¿qué nuevos apartados agregarías o eliminarías?</label>
+      <textarea name="p4" rows="3" required></textarea>
+
+      <label for="p5">Valora nuestro sitio del 1 al 5:</label>
+      <div class="rating">
+        <label><input type="radio" name="p5" value="1" required> 1 ⭐</label>
+        <label><input type="radio" name="p5" value="2"> 2 ⭐⭐</label>
+        <label><input type="radio" name="p5" value="3"> 3 ⭐⭐⭐</label>
+        <label><input type="radio" name="p5" value="4"> 4 ⭐⭐⭐⭐</label>
+        <label><input type="radio" name="p5" value="5"> 5 ⭐⭐⭐⭐⭐</label>
+      </div>
+
+      <label for="p6">Comentarios adicionales (opcional):</label>
+      <textarea name="p6" rows="2"></textarea>
+
+      <button type="submit" class="submit-btn">Enviar Opinión</button>
+    </form>
+      <div class="b">
+   <div> <a href="pagina_prin.php"><button>Página principal</button></a></div>
+      
+</div>
+  </div>
+</body>
+</html>
+

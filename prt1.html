@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GRUPO TRUPER - Catálogo 2025</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7b00;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .menu-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .menu-buttons button {
+      background: white;
+      color: #ff7b00;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #ffe1c4;
+    }
+
+    .logo {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .carrito {
+      background: #fff3e6;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ffd6b0;
+    }
+
+    .carrito button {
+      background: #ff7b00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .categorias {
+      display: flex;
+      justify-content: space-around;
+      background: #ffe0cc;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f1903c;
+      color: white;
+    }
+
+    .btn-agregar, .btn-eliminar {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-agregar {
+      background-color: #4CAF50;
+    }
+
+    .btn-eliminar {
+      background-color: #d9534f;
+      margin-top: 6px;
+      display: none;
+    }
+
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GRUPO TRUPER - Catálogo 2025</h1>
+    <div class="menu-buttons">
+      <button>Inicio</button>
+      <button>Ofertas</button>
+      <button>Contacto</button>
+      <button>Ayuda</button>
+    </div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo GRUPO TRUPER">
+    </div>
+  </header>
+
+  <div class="carrito">
+    <h2>Carrito de Compras</h2>
+    <p>Productos en carrito: <span id="contador">0</span></p>
+    <p>Total a pagar: $<span id="total">0</span></p>
+    <button onclick="realizarPago()">Realizar pago</button>
+  </div>
+
+  <div class="categorias">
+    <span>Truper</span>
+    <span>Voltek</span>
+    <span>Hermex</span>
+    <span>Fiero</span>
+    <span>Klintek</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="productos">
+      <tr data-precio="39">
+        <td>KLINTEK</td>
+        <td>58006</td>
+        <td>Estopa</td>
+        <td>$39</td>
+        <td>
+          <button class="btn-agregar" onclick="agregar(this)">Agregar</button>
+          <br>
+          <button class="btn-eliminar" onclick="eliminar(this)">Eliminar</button>
+        </td>
+      </tr>
+      <tr data-precio="90">
+        <td>KLINTEK</td>
+        <td>43045</td>
+        <td>Escobas</td>
+        <td>$90</td>
+        <td>
+          <button class="btn-agregar" onclick="agregar(this)">Agregar</button>
+          <br>
+          <button class="btn-eliminar" onclick="eliminar(this)">Eliminar</button>
+        </td>
+      </tr>
+      <tr data-precio="50">
+        <td>KLINTEK</td>
+        <td>57021</td>
+        <td>Pastillas desinfectantes para tanque de W.C.</td>
+        <td>$50</td>
+        <td>
+          <button class="btn-agregar" onclick="agregar(this)">Agregar</button>
+          <br>
+          <button class="btn-eliminar" onclick="eliminar(this)">Eliminar</button>
+        </td>
+      </tr>
+      <!-- Agrega más productos si quieres -->
+    </tbody>
+  </table>
+
+  <footer>
+    &copy; 2025 Grupo Truper. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    let total = 0;
+    let contador = 0;
+
+    function agregar(btn) {
+      const fila = btn.closest('tr');
+      const precio = parseFloat(fila.getAttribute('data-precio'));
+
+      total += precio;
+      contador++;
+
+      document.getElementById('total').innerText = total.toFixed(2);
+      document.getElementById('contador').innerText = contador;
+
+      btn.style.display = 'none';
+      fila.querySelector('.btn-eliminar').style.display = 'inline-block';
+    }
+
+    function eliminar(btn) {
+      const fila = btn.closest('tr');
+      const precio = parseFloat(fila.getAttribute('data-precio'));
+
+      total -= precio;
+      contador--;
+
+      document.getElementById('total').innerText = total.toFixed(2);
+      document.getElementById('contador').innerText = contador;
+
+      btn.style.display = 'none';
+      fila.querySelector('.btn-agregar').style.display = 'inline-block';
+    }
+
+    function realizarPago() {
+      if (contador === 0) {
+        alert('No hay productos en el carrito.');
+      } else {
+        alert(`Gracias por su compra. Total pagado: $${total.toFixed(2)}`);
+        // Reiniciar
+        total = 0;
+        contador = 0;
+        document.getElementById('total').innerText = '0';
+        document.getElementById('contador').innerText = '0';
+        document.querySelectorAll('.btn-eliminar').forEach(btn => btn.style.display = 'none');
+        document.querySelectorAll('.btn-agregar').forEach(btn => btn.style.display = 'inline-block');
+      }
+    }
+  </script>
+
+</body>
+</html>

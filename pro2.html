@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GRUPO TRUPER - Catálogo 2025</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #e6e6e6);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6600, #ff3300);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .slogan {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      font-size: 1.2rem;
+      color: white;
+      animation: deslizar 18s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes deslizar {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .carrito {
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 3px solid #ff6600;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carrito img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .carrito h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .carrito p {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .carrito button {
+      padding: 0.6rem 1.2rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .carrito button:hover {
+      background-color: #218838;
+    }
+
+    .brands {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .brands button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .brands button:hover {
+      background: #e65c00;
+    }
+
+    h3 {
+      margin-left: 20px;
+      color: #444;
+      font-size: 1.3rem;
+    }
+
+    table {
+      width: 95%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    th {
+      background: #ff6600;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .btn-agregar {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-agregar:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <style>
+  /* Estilo del fondo del modal */
+  .modal-fondo {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Contenedor del modal */
+  .modal-contenido {
+    margin: 10% auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: zoomIn 0.3s ease;
+    text-align: center;
+  }
+
+  .modal-contenido img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Botón para cerrar */
+  .cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff3300;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .cerrar-modal:hover {
+    color: #000;
+  }
+
+  @keyframes zoomIn {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+    .b {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .b button {
+      background: beige;
+      color: black;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .b button:hover {
+      background: #e65c00;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <h1>PRODUCTOS VOLTECK 2025</h1>
+   <div class="b">
+   <div> <a href="pagina_prin.php"><button>Página principal</button></a></div>
+     
+      
+</div>
+  <div class="slogan">¡Calidad, innovación y confianza en cada herramienta! Visítanos y conoce lo nuevo...</div>
+</header>
+
+<div class="carrito" id="carrito">
+  <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito de compra">
+  <h2>Carrito de Compras</h2>
+  <p id="cantidad">Productos en carrito: 0</p>
+  <p id="total">Total a pagar: $0</p>
+  <ul id="listaCarrito"></ul>
+ 
+ <a href="formulario.html"><button>Hacer clic para realizar pago</button></a>
+</div>
+
+<div class="header">
+   <center>
+    <h1>GRUPOS COLOSO'S</h1>
+    </center>
+    <div class="search-bar"></div>
+</div>
+<div class="brands">
+  <div> <a href="pro1.html"><button>Truper</button></a></div>
+  <div><a href="pro2.html"><button>Volteck</button></a></div>
+  <div><a href="j.html"><button>Hermex</button></a></div>
+  <div> <a href="fiero.html"><button>Fiero</button></a></div>
+  <div> <a href="klin.html"><button>Klintek</button></a></div>
+</div>
+<h3 style="margin-left:10px;">LISTADO DE PRODUCTOS</h3>
+<table>
+    <tr>
+        <th>Marca</th>
+        <th>Código</th>
+        <th>Descripción<br>(Hacer clic para observar el producto)</th>
+        <th>Precio</th>
+        <th>Agregar al carrito</th>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46713</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a1.jpg')">Combo de focos</a></td>
+        <td>$150</td>
+        <td><button onclick="agregarAlCarrito('Combo de focos', 150,'46713')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>43045</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a2.jpg')">Grapa para cable</a></td>
+        <td>$90</td> 
+        <td><button onclick="agregarAlCarrito('Grapa para cable', 90,'43045')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>44320</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a3.jpg')">Cichos de plástico</a></td>
+        <td>$50</td> 
+        <td><button onclick="agregarAlCarrito('Cichos de plástico', 50,'44320')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>47350</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a4.jpg')">Línea de sobreponer</a></td>
+        <td>$50</td> 
+        <td><button onclick="agregarAlCarrito('Línea de sobreponer', 50,'47350')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46308</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a311.jpg')">Calentador eléctrico</a></td>
+        <td>$150</td> 
+        <td><button onclick="agregarAlCarrito('Calentador eléctrico', 150,'46308')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>467133</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a6.web')">Luminario tipo plafón redondo</a></td>
+        <td>$1,250</td> 
+        <td><button onclick="agregarAlCarrito('Luminario tipo plafón', 1250,'467133')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48590</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a7.jpg')">Reflector</a></td>
+        <td>$250</td> 
+        <td><button onclick="agregarAlCarrito('Reflector', 250,'48590')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46221</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a8.jpg')">Foco LED</a></td>
+        <td>$50</td> 
+        <td><button onclick="agregarAlCarrito('Foco LED', 50,'46221')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46225</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a9.jpg')">Foco LED</a></td>
+        <td>$150</td> 
+        <td><button onclick="agregarAlCarrito('Foco LED', 150,'46225')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>462211</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a10.jpg')">Parrilla eléctrica sencilla</a></td>
+        <td>$1,250</td> 
+        <td><button onclick="agregarAlCarrito('Parrilla eléctrica sencilla', 1250,'462211')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46575</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a11.jpg')">Parrilla eléctrica</a></td>
+        <td>$1,350</td> 
+        <td><button onclick="agregarAlCarrito('Parrilla eléctrica', 1350,'46575')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48670</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a12.jpg')">Extensión eléctrica</a></td>
+        <td>$350</td> 
+        <td><button onclick="agregarAlCarrito('Extensión eléctrica', 350,'48670')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>44675</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a13.jpg')">LED de filamento tipo vela</a></td>
+        <td>$100</td> 
+        <td><button onclick="agregarAlCarrito('LED de filamento tipo vela', 100,'44675')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>47332</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a14.jpg')">Centro de carga para sobreponer</a></td>
+        <td>$300</td> 
+        <td><button onclick="agregarAlCarrito('Centro de carga para sobreponer', 300,'47332')">Agregar</button></td>
+    </tr>
+
+
+
+
+
+
+
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>103575</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('a15.jpg')">Lampara tipo ovni</a></td>
+        <td>$ 230 </td> 
+        <td><button onclick="agregarAlCarrito('Lampara tipo ovni', 230,'103575')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>1035755</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a16.jpg')">Soporte para pantalla</a></td>
+        <td>$ 1250 </td> 
+        <td><button onclick="agregarAlCarrito('Soporte para`pantalla', 1250,'1035755')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>40143</td>
+      <td><a href="javascript:void(0);" onclick="mostrarImagen('a17.jpg')">Cable THW-LS</a></td>
+        <td> $250 </td> 
+        <td><button onclick="agregarAlCarrito('Cable THW-LS', 250)">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46577</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a18.jpg')">Conductor electrico</a></td>
+        <td>$ 50 </td> 
+        <td><button onclick="agregarAlCarrito('Conductor electrico', 50,'40143')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>43932</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a19.web')">Serie de luces</a></td>
+        <td>$ 750 </td> 
+        <td><button onclick="agregarAlCarrito('Serie de luces', 750,'43932')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>44300</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a20.web')">Cinchos de plastico</a></td>
+        <td>$ 50 </td> 
+        <td><button onclick="agregarAlCarrito('Cinchos de plastico', 50,'44300')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48452</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a21.jpg')">Led tipo edeson </a></td>
+        <td>$ 120 </td> 
+        <td><button onclick="agregarAlCarrito('Led tipo edeson ', 120,'48452')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>47444</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a22.jpg')">luminario tipo plafon cuadrado</a></td>
+        <td> $250 </td> 
+        <td><button onclick="agregarAlCarrito('luminario tipo plafon cuadrado', 250,'47444')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48575</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a23.jpg')">Placa, 2 modulos</a></td>
+        <td>$ 120 </td> 
+        <td><button onclick="agregarAlCarrito('Placa, 2 modulos', 120,'48575')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46440</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a24.jpg')">Linea economica</a></td>
+        <td>$ 60 </td> 
+        <td><button onclick="agregarAlCarrito('Linea economica', 60,'46440')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48346</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a26.jpg')">Empotrado redondo</a></td>
+        <td>$ 350 </td> 
+        <td><button onclick="agregarAlCarrito('Empotrado redondo', 350,'48346')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46553</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('a27.jpg')">Extencion electrica</a></td>
+        <td>$ 350 </td> 
+        <td><button onclick="agregarAlCarrito('Extencion electrica', 350,'46553')">Agregar</button></td>
+    </tr>
+
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48042</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a28.jpg')">Extencion lectrica 2m</a></td>
+        <td>$ 150 </td> 
+        <td><button onclick="agregarAlCarrito('Extencion lectrica 2m', 150,'48042')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48043</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a28.jpg')">Extencion lectrica 4m</a></td>
+        <td>$ 150 </td> 
+        <td><button onclick="agregarAlCarrito('Extencion lectrica 4m', 150,'48043')">Agregar</button></td>
+    </tr>
+
+<tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48044</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a28.jpg')">Extencion lectrica 6m</a></td>
+        <td>$ 150 </td> 
+        <td><button onclick="agregarAlCarrito('Extencion lectrica 6m ', 150,'48044')">Agregar</button></td>
+    </tr>
+
+
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48007</td>
+       <td><a href="javascript:void(0);" onclick="mostrarImagen('a29.jpg')">Extencion electrica</a></td>
+        <td>$ 250 </td> 
+        <td><button onclick="agregarAlCarrito('Extencion electrica', 250,'48007')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>48114</td>
+        <td><a href="javascript:void(0);" onclick="mostrarImagen('a30.jpg')">Antena giratoria</a></td>
+        <td>$ 550 </td> 
+        <td><button onclick="agregarAlCarrito('Antena giratoria', 550,'48114')">Agregar</button></td>
+    </tr>
+    <tr>
+        <td style="color: blue;">VOLTECK</td>
+        <td>46494</td>
+     <td><a href="javascript:void(0);" onclick="mostrarImagen('a32.jpg')">Linea osto</a></td>
+        <td>$ 70 </td> 
+        <td><button onclick="agregarAlCarrito('Linea osto', 70,'46494')">Agregar</button></td>
+    </tr>
+
+</table>
+<script>
+let total = 0;
+let cantidad = 0;
+
+function agregarAlCarrito(nombre, precio, clave = "", boton = null) {
+  fetch('r1.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'clave=' + encodeURIComponent(clave)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'agotado') {
+      alert("Este producto ya está agotado.");
+      if (boton) {
+        boton.disabled = true;
+        boton.textContent = "Agotado";
+      }
+    } else if (data.status === 'ok') {
+      cantidad++;
+      total += precio;
+      actualizarResumen();
+
+      const lista = document.getElementById('listaCarrito');
+      const item = document.createElement('li');
+      item.textContent = nombre + " - $" + precio;
+
+      const botonEliminar = document.createElement('button');
+      botonEliminar.textContent = "Eliminar";
+      botonEliminar.style.marginLeft = "10px";
+      botonEliminar.style.backgroundColor = "#d32f2f";
+      botonEliminar.style.color = "white";
+      botonEliminar.style.border = "none";
+      botonEliminar.style.borderRadius = "4px";
+      botonEliminar.style.cursor = "pointer";
+
+      botonEliminar.onclick = function () {
+        lista.removeChild(item);
+        cantidad--;
+        total -= precio;
+        actualizarResumen();
+      };
+
+      item.appendChild(botonEliminar);
+      lista.appendChild(item);
+    } else {
+      alert("Error al actualizar inventario: " + data.msg);
+    }
+  });
+}
+
+function actualizarResumen() {
+  document.getElementById('cantidad').innerText = "Productos en carrito: " + cantidad;
+  document.getElementById('total').innerText = "Total a pagar: $" + total;
+}
+</script>
+<div id="miModal" class="modal-fondo">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+    <img id="imgModal" src="" alt="Vista de producto">
+  </div>
+</div>
+
+<script>
+  function mostrarImagen(rutaImagen) {
+    const modal = document.getElementById("miModal");
+    const img = document.getElementById("imgModal");
+    img.src = rutaImagen;
+    modal.style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("miModal").style.display = "none";
+  }
+
+  // Cierra al hacer clic fuera del modal
+  window.onclick = function(event) {
+    const modal = document.getElementById("miModal");
+    if (event.target === modal) {
+      cerrarModal();
+    }
+  }
+</script>
+
+</body>
+</html>

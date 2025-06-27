@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Pedido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00796b;
+      outline: none;
+      box-shadow: 0 0 5px #80cbc4;
+    }
+
+    button {
+      background: #00796b;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Formulario de Pedido</h2>
+    <form action="transferencia.html" method="GET">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="text" name="direccion" placeholder="Dirección" required>
+      <textarea name="referencia" rows="2" placeholder="Referencia (ej. color de puerta, entre calles)"></textarea>
+      <input type="number" name="monto" placeholder="Monto a pagar $" required>
+      <button type="submit">Enviar y Pagar</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
